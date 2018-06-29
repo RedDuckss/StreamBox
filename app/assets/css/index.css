@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+::-webkit-scrollbar {
+    display: none
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: 'Muli', sans-serif;
+}
+
+body {
+	background: #0E0E0E;
+	color: white;
+}
+
+html, body, .app {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.nav-bar {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background: #1E1E1E;
+
+	display: inline-block;
+}
+
+.nav-bar h1 {
+	float: left;
+}
+
+.nav-bar .inputs,
+.nav-bar h1 {
+	position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-bar .inputs {
+	right: 0;
+}
+
+
+.nav-bar .inputs input {
+	background: none;
+	outline: none;
+
+	border-radius: 25px;
+	height: 35px;
+	border-color: #0E0E0E;
+}
+
+.nav-bar .inputs button {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+
+.media-list {
+	margin-left: 55px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 193px);
+	grid-gap: 10px;
+
+	height: 90%;
+	max-height: 90%;
+	overflow: scroll;
+}
+
+.media-list .media {
+	position: relative;
+    overflow: hidden;
+	cursor: pointer;
+
+	height: 290px;
+}
+
+.media-list .media .title {
+	z-index: 9999;
+
+	position: absolute;
+	left: 0;
+	bottom: -30%;
+	
+    background: black;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+}
+
+.media-list .media .poster {
+	height: 100%;
+	min-width: 193px;
+}
+
+.media-list .media:hover .poster {
+	-webkit-filter: brightness(25%);
+}
+
+.media-list .media:hover .title {
+    opacity: 1;
+    bottom: 0;
+}
+
+.stream-url-list {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+
+	z-index: 9999;
+
+	display: none;
+
+	background: green;
+}
+.stream-url-list.show {
+	display: block;
+}
+
+.network-interface {
+	display: none;
+}

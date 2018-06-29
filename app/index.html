@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Stream Box</title>
+
+		<link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="./assets/css/index.css">
+		<link rel="stylesheet" href="./assets/css/loader.css">
+		<link rel="stylesheet" href="./assets/css/modal.css">
+		<link rel="stylesheet" href="./assets/css/player.css">
+	</head>
+	<body>
+
+		<div class="loader">
+			<div class="loading">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+				<h2>Loading...</h2>
+			</div>
+		</div>
+
+		<div class="app">
+			<div class="nav-bar">
+				<h1>Stream Box v0.0.1 Beta A</h1>
+				<div class="inputs">
+					<input type="search" name="media_search" placeholder="Search">
+					<button type="submit" for="media_search">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="media-list"></div>
+<!--
+			<div class="overview">
+				<div class="header">
+					<img src="https://image.tmdb.org/t/p/w200/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" alt="" class="poster">
+					<p class="title">Jurassic World: Fallen Kingdom</p>
+
+				</div>
+				<div class="description">A volcanic eruption threatens the remaining dinosaurs on the island of Isla Nublar, where the creatures have freely roamed for several years after the demise of an animal theme park known as Jurassic World. Claire Dearing, the former park manager, has now founded the Dinosaur Protection Group, an organization dedicated to protecting the dinosaurs. To help with her cause, Claire has recruited Owen Grady, a former dinosaur trainer who worked at the park, to prevent the extinction of the dinosaurs once again.</div>
+				<div class="cast"></div>
+			</div>
+-->
+			<div class="stream-url-list">
+				<i class="fas fa-times-circle"></i>
+				<ul class="stream-list"></ul>
+			</div>
+
+			<div class="player">
+				<video autoplay controls preload="metadata">
+				</video>
+			</div>
+
+			<div class="network-interface">
+				<div class="networks"></div>
+				<button class="network-button">
+					<i class="fas fa-wifi"></i>
+				</button>
+			</div>
+
+			<div class="modal">
+				<div class="modal-content">
+					<span class="close">×</span>
+					<div class="aside">
+						<img class="poster" src=""></img>
+						<div class="links">
+							<button class="stream">Stream</button>
+							<button class="torrent">Download</button>
+						</div>
+					</div>
+					<div class="metadata">
+						I might put something here eventually
+						<!--
+						<div class="ratings"></div>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script type="text/javascript" src="./assets/js/index.js"></script>
+		<script>if (window.module) module = window.module;</script>
+	</body>
+
+	<template template="error">
+		<div class="error">
+			<div class="title">ERROR :(</div>
+			<div class="description"></div>
+		</div>
+	</template>
+
+	<template template="media">
+		<div class="media">
+			<div class="title"></div>
+			<img src="" alt="" class="poster">
+		</div>
+	</template>
+</html>

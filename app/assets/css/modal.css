@@ -1,0 +1,84 @@
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.modal {
+	z-index: 99999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+
+	display: none;
+}
+
+.modal.show {
+	display: block;
+}
+
+.modal-content {
+    background-color: rgb(54, 56, 56);
+    margin: auto; 
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.modal-content .close {
+    color: #aaa;
+    position: absolute;
+    right:15px;
+    top:15px;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 99;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .aside {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+.modal-content .aside img {
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.modal-content .metadata {
+	width: 70%;
+	height: 100%;
+	float: right;
+}
+
+.modal-content .links button {
+	display: block;
+	margin-bottom: 5px;
+
+	width: 100%;
+	height: 50px;
+
+	color: white;
+	background: gray;
+}
