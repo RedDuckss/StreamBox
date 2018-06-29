@@ -1,5 +1,7 @@
 # Stream Box
 
+A NodeJS/Electron app for watching, streaming and downloading movies
+
 ## Implemented
 
 - [x] Movie searching
